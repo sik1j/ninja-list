@@ -27,8 +27,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     `https://jsonplaceholder.typicode.com/users/${context?.params?.id}`
   );
   let data = await response.json();
-  // const id = context?.params?.id;
-  // data = data[Number.parseInt(id as string) - 1];
 
   return {
     props: { ninja: data },
@@ -36,7 +34,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Details: React.FC<Props> = ({ ninja }) => {
-  console.log(ninja);
   return (
     <div>
       <h1>{ninja.name}</h1>

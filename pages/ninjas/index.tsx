@@ -47,8 +47,8 @@ const Index: React.FC<Props> = ({ ninjas }) => {
     <div>
       <h1>All Ninjas</h1>
       {ninjas.map((ninja: Ninja) => (
-        <div>
-          <Link key={ninja.id} href={`ninjas/${ninja.id}`}>
+        <div key={ninja.id}>
+          <Link href={`ninjas/${ninja.id}`}>
             <a className={styles.single}>
               <h3>{ninja.name}</h3>
             </a>
